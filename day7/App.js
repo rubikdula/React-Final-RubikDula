@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation';
 import { createStackNavigator } from '@react-navigation/stack';
 import MenuScreen from './screens/MenuScreen';
 import ExerciseScreen from './screens/ExerciseScreen';
