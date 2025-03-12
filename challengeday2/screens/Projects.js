@@ -11,20 +11,15 @@ const Projects = ({ image }) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: '48%',
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        padding: 10,
-        shadowColor: '#000',
-        shadowOpacity: 0.1,
-        shadowOffset: { width: 0, height: 2 },
-        elevation: 3,
-        marginBottom: 10,
+       width: '48%',
+       borderRadius: 10,
+       overflow: 'hidden',
+       backgroundColor: '#fff',
+       elevation: 3,
     },
     image: {
         width: '100%',
-        height: 150,
-        borderRadius: 8,
+        height: 120,
     },
 });
 
