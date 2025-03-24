@@ -8,6 +8,9 @@ const HomeScreen = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ProfileScreen')}>
                 <Text style={styles.buttonText}>Go to Profile</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('BoxScreen')}>
+                <Text style={styles.buttonText}>Go to Box Screen</Text>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -29,6 +32,7 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 30,
         borderRadius: 8,
+        marginTop: 20,
     },
     buttonText: {
         color: '#fff',
