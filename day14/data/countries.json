@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Antalya",
+        "country": "Turkey",
+        "description": "Very beautiful city"
+    },
+    {
+        "id": 2,
+        "name": "Oslo",
+        "country": "Norway",
+        "description": "Oslo is the capital and most populous city of Norway. It constitutes both a county and a municipality."
+    },
+    {
+        "id": 3,
+        "name": "Prishtina",
+        "country": "Kosovo",
+        "description": "In antiquity, the area of Pristina was part of the Dardanian Kingdom. The heritage of the classical era is represented by the settlement of Ulpiana."
+    },
+    {
+        "id": 4,
+        "name": "Tokyo",
+        "country": "Japan",
+        "description": "Tokyo, officially the Tokyo Metropolis, is the capital and most populous city in Japan. With a population of over 14 million in the city proper in 2023, it is one of the most populous urban areas in the world. "
+    },
+    {
+        "id": 5,
+        "name": "Thessaloniki",
+        "country": "Greece",
+        "description": "Thessaloniki is the second-largest city in Greece, with slightly over one million inhabitants in its metropolitan area, and the capital of the geographic region of Macedonia, the administrative region of Central Macedonia and the Decentralized Administration of Macedonia and Thrace."
+    },
+    {
+        "id": 6,
+        "name": "Beijing",
+        "country": "China",
+        "description": "Beijing is the capital city of China. With more than 22 million residents, it is the world's most populous national capital city as well as China's second largest city by urban area after Shanghai."
+    }
+]
