@@ -1,12 +1,13 @@
 import axios from 'axios';
 import dotenv from 'dotenv';
-import { OPENAI_API_KEY } from '@env';
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
+import { API_KEY } from '@env';
+
+const ENDPOINT = 'https://api.openai.com/v1/chat/completions';
+
 export const fetchChatResponse = async (messages) => {
     try {
         const response = await axios.post(
-            OPENAI_API_URL,
+            ENDPOINT,
             {
                 model: 'gpt-3.5-turbo',
                 messages: messages,
@@ -16,7 +17,7 @@ export const fetchChatResponse = async (messages) => {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${OPENAI_API_KEY}`,
+                    'Authorization': `Bearer ${API_KEY}`,
                 },
             }
         );
@@ -26,3 +27,46 @@ export const fetchChatResponse = async (messages) => {
         throw error;
     }
 };
+
+ export async function askQuestion(question) {
+    const messages = [
+        { role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'user', content: question },
+    ];
+
+    try {
+        const response = await fetchChatResponse(messages);
+        return response;
+    } catch (error) {
+        console.error('Error asking question:', error);
+        throw error;
+    }
+}
+export async function generateStudyPlan(input) {
+    const messages = [
+        { role: 'system', content: 'You are a study planner.' },
+        { role: 'user', content: `Create a study plan based on the following input: ${input}` },
+    ];
+
+    try {
+        const response = await fetchChatResponse(messages);
+        return response;
+    } catch (error) {
+        console.error('Error generating study plan:', error);
+        throw error;
+    }
+}
+export async function generateFlashcards(input) {
+    const messages = [
+        { role: 'system', content: 'You are a flashcard generator.' },
+        { role: 'user', content: `Generate flashcards based on the following input: ${input}` },
+    ];
+
+    try {
+        const response = await fetchChatResponse(messages);
+        return response;
+    } catch (error) {
+        console.error('Error generating flashcards:', error);
+        throw error;
+    }
+}
